@@ -216,14 +216,21 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-/* Footer */
+/* Styling untuk Footer */
 footer {
   background-color: #333;
-  color: #fff;
+  color: #ecf0f1;
   text-align: center;
-  padding: 10px 0;
-  width: 100%;
-  position: relative;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer p:hover {
+  color: #bdc3c7;
 }
 
 /* Styling untuk Section Pergerakan */
@@ -506,22 +513,55 @@ footer {
 
 /* Responsive Layout */
 @media (max-width: 768px) {
+  /* Global Adjustments */
+  .container {
+    width: 95%;
+  }
+
+  /* Header */
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+
+  /* Hero Section */
+  #hero {
+    height: 60vh;
+    padding: 20px;
+  }
+
   #hero h2 {
     font-size: 2.5em;
   }
 
   #hero p {
     font-size: 1.2em;
+    margin-bottom: 20px;
   }
 
-  nav ul {
-    flex-direction: column;
+  .cta-btn {
+    font-size: 1em;
+    padding: 8px 16px;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  /* Content Section */
+  .content h2 {
+    font-size: 2rem;
   }
 
+  .content p {
+    font-size: 1rem;
+  }
+
+  /* Images Section */
   .images {
     flex-direction: column;
     align-items: center;
@@ -529,9 +569,56 @@ footer {
 
   .image-left,
   .image-right {
-    width: 80%;
+    width: 100%;
+  }
+
+  /* Quote Section */
+  .quote {
+    font-size: 1.2em;
+  }
+
+  /* Pergerakan Section */
+  .pergerakan-section h2 {
+    font-size: 2rem;
+  }
+
+  .pergerakan-list > li h3 {
+    font-size: 1.5rem;
+  }
+
+  .pergerakan-list ol {
+    margin-left: 15px;
+  }
+
+  /* Dampak Muhammadiyah Section */
+  #dampak .section-title {
+    font-size: 2rem;
+  }
+
+  .card-dampak h3 {
+    font-size: 1.5rem;
+  }
+
+  .card-dampak p {
+    font-size: 1rem;
+  }
+
+  /* Sumber Referensi Section */
+  #sumber .section-title {
+    font-size: 1.8rem;
+  }
+
+  .sumber-item {
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 15px 0;
+    font-size: 0.9rem;
   }
 }
+
 
 @keyframes fadeInUp {
   from {
