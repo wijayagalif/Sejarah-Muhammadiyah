@@ -34,7 +34,7 @@ header {
 header h1 {
   color: #fff;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 nav ul {
@@ -245,28 +245,31 @@ footer p:hover {
   font-size: 2.5rem;
   color: #333;
   margin-bottom: 20px;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 .pergerakan-list {
-  list-style: none; /* Menghapus list-style agar bisa mengendalikan tampilan nomor */
+  list-style: none;
+  /* Menghapus list-style agar bisa mengendalikan tampilan nomor */
   font-size: 1.2rem;
   color: #333;
   line-height: 1.8;
   padding-left: 0;
 }
 
-.pergerakan-list > li h3 {
+.pergerakan-list>li h3 {
   font-size: 1.8rem;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   color: #222;
-  font-weight: bold; /* Membuat teks menjadi bold */
+  font-weight: bold;
+  /* Membuat teks menjadi bold */
 }
 
 .pergerakan-list ol {
   list-style-type: lower-alpha;
   margin-left: 20px;
-  font-weight: normal; /* Membuat abjad sub-poin tetap normal */
+  font-weight: normal;
+  /* Membuat abjad sub-poin tetap normal */
 }
 
 .pergerakan-list ol li {
@@ -281,15 +284,15 @@ footer p:hover {
   color: #444;
 }
 
-.pergerakan-list > li:nth-child(odd) {
+.pergerakan-list>li:nth-child(odd) {
   background: #f9f9f9;
 }
 
-.pergerakan-list > li:nth-child(even) {
+.pergerakan-list>li:nth-child(even) {
   background: #eaeaea;
 }
 
-.pergerakan-list > li {
+.pergerakan-list>li {
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -302,19 +305,19 @@ footer p:hover {
 }
 
 .pergerakan-list ol li:before {
-  content: '•';
+  content: "•";
   color: #007bff;
   font-weight: bold;
-  display: inline-block; 
+  display: inline-block;
   width: 1em;
   margin-left: -1em;
 }
 
-.pergerakan-list > li {
+.pergerakan-list>li {
   transition: box-shadow 0.3s;
 }
 
-.pergerakan-list > li:hover {
+.pergerakan-list>li:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -322,11 +325,24 @@ footer p:hover {
 #content {
   padding: 40px 0;
 }
+
 .section-title {
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
   font-size: 2em;
   margin-bottom: 20px;
   color: #34495e;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #007bff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 /* Styles for Content Section in Peristiwa Penting Muhammadiyah */
@@ -387,10 +403,8 @@ footer p:hover {
 #dampak .section-title {
   font-size: 2.5rem;
   color: #334155;
-  text-align: center;
-  margin-bottom: 30px;
-  letter-spacing: 1px;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Style untuk Card */
@@ -400,7 +414,8 @@ footer p:hover {
   padding: 20px;
   margin-bottom: 20px;
   position: relative;
-  border-left: 5px solid #007bff; /* Garis samping warna biru */
+  border-left: 5px solid #007bff;
+  /* Garis samping warna biru */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
@@ -408,7 +423,7 @@ footer p:hover {
 }
 
 .card-dampak:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -433,7 +448,8 @@ footer p:hover {
 }
 
 .card-dampak h3:before {
-  content: "🔷"; /* Ikon bintang kecil */
+  content: "🔷";
+  /* Ikon bintang kecil */
   color: #000000;
   margin-right: 10px;
   font-size: 1.2rem;
@@ -447,60 +463,19 @@ footer p:hover {
 }
 
 /* Sumber Referensi Styles */
-#sumber {
-  padding: 40px 20px;
-  background-color: #f3f7fa;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: #334155;
-  margin-bottom: 30px;
-}
-
 .sumber-item {
   font-size: 1.1rem;
   color: #475569;
-  opacity: 0;
-  transform: translateX(-30px);
-  animation: slideIn 0.6s forwards;
-  animation-delay: calc(var(--delay) * 0.2s); /* Delay bertingkat */
-  margin-bottom: 15px;
+  background-color: #f3f4f6; /* Sesuaikan dengan warna utama */
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.sumber-item:nth-child(1) { --delay: 1; }
-.sumber-item:nth-child(2) { --delay: 2; }
-.sumber-item:nth-child(3) { --delay: 3; }
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-#referensi-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-.referensi-item {
-  font-size: 1.2rem;
-  color: #475569;
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  margin: 15px 0;
-}
-
-.referensi-item.show {
-  opacity: 1;
-  transform: translateX(0);
+.sumber-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .anggota-list {
@@ -509,10 +484,35 @@ footer p:hover {
   font-size: 1.1rem;
   color: #334155;
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.anggota-list li {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 86, 179, 0.9));
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.anggota-list li i {
+  margin-right: 10px;
+}
+
+.anggota-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Layout */
 @media (max-width: 768px) {
+
   /* Global Adjustments */
   .container {
     width: 95%;
@@ -582,7 +582,7 @@ footer p:hover {
     font-size: 2rem;
   }
 
-  .pergerakan-list > li h3 {
+  .pergerakan-list>li h3 {
     font-size: 1.5rem;
   }
 
@@ -617,21 +617,53 @@ footer p:hover {
     padding: 15px 0;
     font-size: 0.9rem;
   }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  #dampak .section-title {
+    font-size: 2rem;
+  }
 }
 
+/* Tambahan untuk Peristiwa dan Dampak */
+@media (max-width: 768px) {
+
+  /* Header di halaman Peristiwa */
+  header h1 {
+    font-size: 2em;
+  }
+
+  /* Header di halaman Dampak */
+  header h1 {
+    font-size: 2em;
+  }
+
+  /* Pastikan nav di halaman Peristiwa dan Dampak juga responsif */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
+}
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.pergerakan-list > li {
+.pergerakan-list>li {
   animation: fadeInUp 0.6s ease both;
 }
 
