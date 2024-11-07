@@ -1,67 +1,108 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pergerakan Muhammadiyah</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pergerakan Muhammadiyah</title>
-  <link rel="stylesheet" href="../assets/css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>Pergerakan Muhammadiyah</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="latarbelakang.html">Latar Belakang</a></li>
-          <li><a href="pergerakan.html">Pergerakan</a></li>
-          <li><a href="peristiwa.html">Peristiwa Penting</a></li>
-          <li><a href="dampak.html">Dampak</a></li>
-          <li><a href="sumber.html">Sumber dan Anggota Kelompok</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-    <section class="pergerakan-section">
+  <body>
+    <!-- Header -->
+    <header>
       <div class="container">
+        <h1>Pergerakan Muhammadiyah</h1>
+
+        <!-- Navbar Desktop -->
+        <nav class="navbar-desktop">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="latarbelakang.html">Latar Belakang</a></li>
+            <li><a href="pergerakan.html">Pergerakan</a></li>
+            <li><a href="peristiwa.html">Peristiwa Penting</a></li>
+            <li><a href="dampak.html">Dampak</a></li>
+            <li><a href="sumber.html">Sumber dan Anggota Kelompok</a></li>
+          </ul>
+        </nav>
+
+        <!-- Navbar Mobile -->
+        <nav class="navbar-mobile">
+          <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="mobile-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="latarbelakang.html">Latar Belakang</a></li>
+            <li><a href="pergerakan.html">Pergerakan</a></li>
+            <li><a href="peristiwa.html">Peristiwa Penting</a></li>
+            <li><a href="dampak.html">Dampak</a></li>
+            <li><a href="sumber.html">Sumber dan Anggota Kelompok</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section Pergerakan Muhammadiyah -->
+    <section class="pergerakan-section" id="pergerakan">
+      <div class="container">
+        <h2 class="section-title">
+          Kontribusi Muhammadiyah dalam Berbagai Bidang
+        </h2>
         <ol class="pergerakan-list">
           <li>
             <h3>1. Bidang Politik dan Pemerintahan</h3>
-            <p>Muhammadiyah tidak terlibat langsung dalam politik, tetapi anggotanya berkontribusi dalam berbagai
-              peristiwa penting.</p>
-            <ol type="a">
-              <li>Tokoh Muhammadiyah, seperti <em>K.H. Mas Mansyur</em>, tergabung dalam kelompok <strong>Empat
-                  Serangkai</strong> pada masa pendudukan Jepang.</li>
-              <li>Anggota Muhammadiyah seperti <em>Jenderal Sudirman</em> berperan dalam tentara PETA.</li>
-              <li>Muhammadiyah berpartisipasi dalam <em>perumusan Pancasila</em> dan aktif dalam partai politik
-                <em>Masyumi</em> pada masa Orde Lama, meskipun secara resmi menolak berpolitik.</li>
-            </ol>
+            <p>
+              Pada masa pendudukan Jepang, <strong>K.H. Mas Mansyur</strong>,
+              tokoh Muhammadiyah, tergabung dalam <em>Empat Serangkai</em>.
+              Banyak anggota Muhammadiyah, seperti
+              <strong>Jenderal Sudirman</strong>, juga berperan dalam
+              <em>tentara PETA</em>. Pada masa awal kemerdekaan, Muhammadiyah
+              turut serta dalam <em>perumusan Pancasila</em> dan meski menolak
+              terlibat dalam partai politik, anggotanya aktif di
+              <strong>partai Masyumi</strong> pada masa Orde Lama. Pada masa
+              Orde Baru, Muhammadiyah ikut mendirikan <em>BKAM</em> dan
+              <em>Parmusi</em>.
+            </p>
           </li>
           <li>
             <h3>2. Bidang Ekonomi</h3>
-            <p>Muhammadiyah memiliki program ekonomi melalui amal usaha dan peningkatan produktivitas. Mereka juga
-              memfasilitasi pengembangan <em>kewirausahaan, UMKM, dan lembaga keuangan syariah seperti</em>
-              <strong>BMT</strong> dan <em>BPR Syariah</em>.</p>
+            <p>
+              Melalui amal usaha, Muhammadiyah menggerakkan ekonomi dengan
+              mengembangkan <em>kewirausahaan</em> dan peningkatan produktivitas
+              aset. Mereka mendukung <em>UMKM</em> dan memiliki lembaga keuangan
+              syariah seperti <strong>Baitul Mal wa Tanwil (BMT)</strong> serta
+              <em>BPR Syariah</em> yang mendukung kesejahteraan umat.
+            </p>
           </li>
           <li>
             <h3>3. Bidang Kebudayaan</h3>
-            <p>Muhammadiyah menghargai budaya lokal dan menyebarkan ajaran Islam dengan tetap mengakui nilai-nilai
-              <em>budaya Jawa</em>. Gerakan ini juga terlihat dalam <strong>Muktamar ke-43 di Aceh</strong> dan proyek
-              <em>Dakwah Kultural di Denpasar, Bali</em>.</p>
+            <p>
+              Muhammadiyah tetap menghormati budaya lokal, seperti
+              <em>budaya Jawa</em>, sambil menyebarkan ajaran Islam. Hal ini
+              diakui oleh <strong>Hatta</strong>, yang menekankan pentingnya
+              hubungan Muhammadiyah dengan akar budaya Jawa. Perayaan
+              <strong>Muktamar ke-43 di Aceh</strong> dan proyek
+              <em>Dakwah Kultural di Bali</em> menjadi contoh usaha Muhammadiyah
+              untuk memperkuat <strong>Islam varian Indonesia</strong>.
+            </p>
           </li>
           <li>
             <h3>4. Bidang Pendidikan</h3>
-            <p>Muhammadiyah mendirikan banyak <em>sekolah dan universitas</em> yang terbuka untuk berbagai kalangan,
-              termasuk masyarakat kurang mampu. Selain mengajarkan mata pelajaran umum, mereka juga memasukkan
-              <em>ajaran Islam</em> dan mendorong <em>integritas moral, keterampilan sosial, dan kepemimpinan</em>.
-              Pendidikan ini tidak hanya berbasis pesantren, tetapi menggunakan <strong>sistem sekolah modern</strong>.
+            <p>
+              Muhammadiyah mendirikan
+              <em>sekolah-sekolah dan universitas</em> yang terbuka untuk semua
+              kalangan, termasuk yang kurang mampu. Pendidikan Muhammadiyah
+              menekankan
+              <em>nilai-nilai moral, keterampilan sosial, dan kepemimpinan</em>
+              dan tidak hanya mengandalkan sistem pesantren, tetapi juga
+              menerapkan <strong>sistem sekolah modern</strong> dengan kurikulum
+              umum dan agama.
             </p>
           </li>
         </ol>
@@ -76,7 +117,5 @@
     </footer>
 
     <script src="../assets/js/scripts.js"></script>
-    
-</body>
-
+  </body>
 </html>

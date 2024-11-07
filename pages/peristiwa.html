@@ -1,78 +1,100 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peristiwa Penting Muhammadiyah</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peristiwa Penting Muhammadiyah</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <!-- Header dengan Navbar -->
+    <header>
+      <div class="container">
+        <h1>Peristiwa Penting Muhammadiyah</h1>
 
-<body>
-  <!-- Header dengan Navbar -->
-  <header>
-    <div class="container">
-      <h1>Peristiwa Penting Muhammadiyah</h1>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="latarbelakang.html">Latar Belakang</a></li>
-          <li><a href="pergerakan.html">Pergerakan</a></li>
-          <li><a href="peristiwa.html">Peristiwa Penting</a></li>
-          <li><a href="dampak.html">Dampak</a></li>
-          <li><a href="sumber.html">Sumber dan Anggota Kelompok</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+        <!-- Navbar Desktop -->
+        <nav class="navbar-desktop">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="latarbelakang.html">Latar Belakang</a></li>
+            <li><a href="pergerakan.html">Pergerakan</a></li>
+            <li><a href="peristiwa.html">Peristiwa Penting</a></li>
+            <li><a href="dampak.html">Dampak</a></li>
+            <li><a href="sumber.html">Sumber dan Anggota Kelompok</a></li>
+          </ul>
+        </nav>
 
-  <!-- Content Section -->
-  <section id="content">
-    <div class="container">
-      <article class="card">
-        <h2 class="section-title">Peristiwa Penting Muhammadiyah</h2>
-        <p>
-          <em>Muhammadiyah lahir dari gagasan reformasi yang dibawa oleh
-            <strong>K.H. Ahmad Dahlan</strong> setelah belajar di Mekkah.</em>
-        </p>
-        <p>
-          Muhammadiyah berdiri untuk menjaga ide-ide pembaruan Islam. Selain
-          itu, Muhammadiyah berkembang melalui dukungan organisasi
-          <strong>Boedi Oetomo</strong> yang turut mendukung penyebaran ajaran
-          Islam.
-        </p>
-        <h3>Faktor Berdirinya Muhammadiyah:</h3>
-        <ul>
-          <li>
-            Kurangnya persatuan umat Islam dan lemahnya ukhuwah Islamiyah.
-          </li>
-          <li>Fanatisme buta dan pemikiran yang sempit di kalangan umat.</li>
-          <li>
-            Kemunduran pendidikan Islam yang tidak memenuhi tuntutan zaman.
-          </li>
-          <li>
-            Keterbatasan ruang gerak Muhammadiyah pada masa Hindia Belanda.
-          </li>
-        </ul>
-        <h3>Pemimpin Muhammadiyah Setelah K.H. Ahmad Dahlan:</h3>
-        <ul class="leaders">
-          <li><strong>K.H. Hisyam</strong> (1931-1936)</li>
-          <li><strong>K.H. Mas Mansyur</strong> (1936-1942)</li>
-          <li><strong>Ki Bagus Hadikusumo</strong> (1942-1953)</li>
-        </ul>
-      </article>
-    </div>
-  </section>
+        <!-- Navbar Mobile -->
+        <nav class="navbar-mobile">
+          <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="mobile-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="latarbelakang.html">Latar Belakang</a></li>
+            <li><a href="pergerakan.html">Pergerakan</a></li>
+            <li><a href="peristiwa.html">Peristiwa Penting</a></li>
+            <li><a href="dampak.html">Dampak</a></li>
+            <li><a href="sumber.html">Sumber dan Anggota Kelompok</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Mengenal Muhammadiyah. Semua hak dilindungi.</p>
-    </div>
-  </footer>
-  <script src="../assets/js/scripts.js"></script>
-</body>
+    <!-- Content Section -->
+    <section id="content">
+      <div class="container">
+        <article class="card">
+          <h2 class="section-title">Peristiwa Penting Muhammadiyah</h2>
+          <p>
+            <em
+              >Muhammadiyah lahir dari gagasan reformasi yang dibawa oleh
+              <strong>K.H. Ahmad Dahlan</strong> setelah belajar di Mekkah.</em
+            >
+          </p>
+          <p>
+            Muhammadiyah berdiri untuk menjaga ide-ide pembaruan Islam. Selain
+            itu, Muhammadiyah berkembang melalui dukungan organisasi
+            <strong>Boedi Oetomo</strong> yang turut mendukung penyebaran ajaran
+            Islam.
+          </p>
+          <h3>Faktor Berdirinya Muhammadiyah:</h3>
+          <ul>
+            <li>
+              Kurangnya persatuan umat Islam dan lemahnya ukhuwah Islamiyah.
+            </li>
+            <li>Fanatisme buta dan pemikiran yang sempit di kalangan umat.</li>
+            <li>
+              Kemunduran pendidikan Islam yang tidak memenuhi tuntutan zaman.
+            </li>
+            <li>
+              Keterbatasan ruang gerak Muhammadiyah pada masa Hindia Belanda.
+            </li>
+          </ul>
+          <p>
+            Para pemimpin Muhammadiyah setelah <b>K.H. Ahmad Dahlan</b>, seperti
+            <b>K.H. Hisyam (1931-1936), K.H. Mas Mansyur (1936-1942)</b>, dan
+            <b>Ki Bagus Hadikusumo (1942-1953)</b>, turut memperkuat peran
+            organisasi ini hingga menjadi salah satu organisasi Islam terbesar
+            di Indonesia.
+          </p>
+        </article>
+      </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Mengenal Muhammadiyah. Semua hak dilindungi.</p>
+      </div>
+    </footer>
+    <script src="../assets/js/scripts.js"></script>
+  </body>
 </html>
