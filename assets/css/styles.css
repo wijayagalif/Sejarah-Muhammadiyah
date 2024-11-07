@@ -9,9 +9,14 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  background-color: #f7f4ef;
+  font-family: "Georgia", sans-serif;
+  background-color: #f4f1e6;
   color: #333;
+}
+
+.card-dampak p,
+.sumber-item {
+  font-family: "Open Sans", sans-serif;
 }
 
 h1,
@@ -34,21 +39,25 @@ header {
 header h1 {
   color: #fff;
   text-align: center;
-  font-size: 2em;
 }
 
-nav ul {
-  list-style: none;
+/* Desktop Navbar */
+.navbar-desktop {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
-nav ul li {
+.navbar-desktop ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar-desktop ul li {
   margin: 0 15px;
 }
 
-nav ul li a {
+.navbar-desktop ul li a {
   color: #f7f4ef;
   text-decoration: none;
   font-size: 1.2em;
@@ -56,9 +65,134 @@ nav ul li a {
   transition: color 0.3s, border-bottom 0.3s;
 }
 
-nav ul li a:hover {
+.navbar-desktop ul li a,
+.cta-btn,
+.card-dampak:hover {
+  transition: all 0.3s ease;
+}
+
+.navbar-desktop ul li a:hover {
   color: #ffc107;
   border-bottom: 2px solid #ffc107;
+}
+
+/* Mobile Navbar */
+.navbar-mobile {
+  display: none; /* Hidden on desktop */
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+  background-color: #222;
+  text-align: right;
+}
+
+.navbar-mobile ul {
+  margin-top: auto; /* Sesuaikan nilai sesuai kebutuhan */
+  padding-top: 20px;
+}
+
+/* Gaya dasar untuk hamburger */
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  padding: 10px;
+  width: 30px;
+  height: 20px;
+  z-index: 16;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  transition: 0.4s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger span:nth-child(3) {
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger.active {
+  transform: rotate(90deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  background: #333;
+  padding: 20px;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  overflow-y: auto;
+  margin-top: 0;
+  transition: transform 0.4s ease;
+}
+
+.mobile-menu.show {
+  transform: translateX(0); /* Slide ke posisi semula */
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0;
+}
+
+.mobile-menu ul li {
+  margin-bottom: 15px;
+}
+
+.mobile-menu ul li a {
+  color: #f0ead6;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Georgia", serif;
+}
+
+.mobile-menu li {
+  margin: 20px 0;
+}
+
+.mobile-menu li a {
+  color: #f7f4ef;
+  text-decoration: none;
+  font-size: 1em;
+  display: block;
+  padding: 3px;
 }
 
 /* Hero Section */
@@ -83,12 +217,12 @@ nav ul li a:hover {
 }
 
 #hero h2 {
-  font-size: 3em;
+  font-size: 2rem;
   z-index: 1;
 }
 
 #hero p {
-  font-size: 1.5em;
+  font-size: 1rem;
   margin-bottom: 30px;
   z-index: 1;
 }
@@ -106,6 +240,7 @@ nav ul li a:hover {
 
 .cta-btn:hover {
   background-color: #ffcd38;
+  transform: scale(1.05); /* Menambahkan sedikit pembesaran */
 }
 
 /* Content Section */
@@ -137,6 +272,7 @@ nav ul li a:hover {
 
 .images img {
   width: 100%;
+  max-width: 100%;
   border-radius: 8px;
 }
 
@@ -173,6 +309,8 @@ nav ul li a:hover {
   background: #f4f4f9;
   border-top: 2px solid #ddd;
   border-bottom: 2px solid #ddd;
+  margin: 10px auto;
+  max-width: auto;
 }
 
 .quote {
@@ -221,7 +359,7 @@ footer {
   background-color: #333;
   color: #ecf0f1;
   text-align: center;
-  padding: 15px;
+  padding: 20px 10px;
   font-size: 0.9em;
 }
 
@@ -233,92 +371,97 @@ footer p:hover {
   color: #bdc3c7;
 }
 
+/* Pergerakan Section Styling */
+.pergerakan-section {
+  background-color: #f9f8f4;
+  padding: 50px 20px;
+  border-top: 3px solid #d6d1c4;
+  font-family: "Merriweather", serif;
+}
+
 /* Styling untuk Section Pergerakan */
 .pergerakan-section {
-  background-color: #f4f4f9;
-  padding: 40px 20px;
+  background-color: #f5f5dc; /* Warna latar seperti kertas tua */
+  padding: 50px 20px;
   border-top: 2px solid #ddd;
+  font-family: "Georgia", serif; /* Font klasik */
 }
 
 .pergerakan-section h2 {
   text-align: center;
   font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+  color: #3b3a30;
+  margin-bottom: 30px;
   font-family: "Merriweather", serif;
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .pergerakan-list {
   list-style: none;
-  /* Menghapus list-style agar bisa mengendalikan tampilan nomor */
   font-size: 1.2rem;
   color: #333;
   line-height: 1.8;
   padding-left: 0;
 }
 
-.pergerakan-list>li h3 {
-  font-size: 1.8rem;
-  font-family: "Merriweather", serif;
-  color: #222;
-  font-weight: bold;
-  /* Membuat teks menjadi bold */
+.pergerakan-list > li {
+  background-color: #faf4e0; /* Latar yang lebih cerah */
+  padding: 20px;
+  border-left: 4px solid #6b4f4f; /* Warna border yang kontras */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
+.pergerakan-list > li h3 {
+  font-size: 1.5rem;
+  color: #6b4f4f;
+  font-family: "Merriweather", serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.pergerakan-list > li p {
+  color: #4a4a4a;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.pergerakan-list > li:nth-child(odd) {
+  background-color: #ece0c8; /* Alternatif warna */
+}
+
+.pergerakan-list > li:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Elemen list di dalam pergerakan */
 .pergerakan-list ol {
-  list-style-type: lower-alpha;
+  list-style-type: none;
   margin-left: 20px;
   font-weight: normal;
-  /* Membuat abjad sub-poin tetap normal */
 }
 
 .pergerakan-list ol li {
   margin-bottom: 8px;
-  font-size: 1rem;
   color: #555;
-}
-
-.pergerakan-list li p {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #444;
-}
-
-.pergerakan-list>li:nth-child(odd) {
-  background: #f9f9f9;
-}
-
-.pergerakan-list>li:nth-child(even) {
-  background: #eaeaea;
-}
-
-.pergerakan-list>li {
-  padding: 15px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  border-left: 5px solid #333;
-  padding-left: 15px;
-}
-
-.pergerakan-list ol {
-  list-style-type: none;
+  padding-left: 1em;
+  position: relative;
 }
 
 .pergerakan-list ol li:before {
-  content: "•";
-  color: #007bff;
+  content: "• ";
+  color: #6b4f4f;
   font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
-
-.pergerakan-list>li {
-  transition: box-shadow 0.3s;
-}
-
-.pergerakan-list>li:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  transform: translateX(-1em);
 }
 
 /* Content Section */
@@ -335,49 +478,50 @@ footer p:hover {
   position: relative;
 }
 
-.section-title::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background-color: #007bff;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
 /* Styles for Content Section in Peristiwa Penting Muhammadiyah */
 
 #content {
-  background-color: #f9f9f9;
-  padding: 40px 20px;
+  background: #f9f7f1;
+  padding: 60px 20px;
 }
 
 #content .section-title {
-  font-size: 2.5rem;
-  color: #222;
+  font-size: 2.8rem;
+  color: #4a403a;
   text-align: center;
-  margin-bottom: 20px;
+  font-family: "Garamond", serif;
 }
 
 .card {
   background-color: #ffffff;
+  border: 1px solid #d4c4b4;
   padding: 20px;
-  margin: 20px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  font-family: "Garamond", serif;
+  color: #4a403a;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .card p {
   font-size: 1.1rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 15px;
+  color: #5d5550;
+  line-height: 1.75;
+  font-family: "Georgia", serif;
 }
 
 .card ul {
@@ -394,31 +538,33 @@ footer p:hover {
 }
 
 /* Dampak Muhammadiyah Styles */
-
 #dampak {
-  background-color: #f9fbfc;
+  background-color: #faf8f5; /* Latar belakang lebih hangat */
   padding: 50px 20px;
 }
 
 #dampak .section-title {
   font-size: 2.5rem;
-  color: #334155;
+  color: #3e3a3a;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  border-bottom: 2px solid #3e3a3a;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Georgia", serif;
 }
 
 /* Style untuk Card */
 .card-dampak {
-  background: linear-gradient(to right, #ffffff, #f3f7fa);
-  background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px;
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 25px;
   position: relative;
-  border-left: 5px solid #007bff;
-  /* Garis samping warna biru */
-  border-radius: 12px;
+  border: 2px solid #c2a47f; /* Warna garis samping cokelat vintage */
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
@@ -428,77 +574,125 @@ footer p:hover {
   top: 0;
   left: 0;
   height: 100%;
-  width: 6px;
-  background: linear-gradient(180deg, #ffffff, #00c6ff);
-  border-radius: 0 5px 5px 0;
+  width: 8px;
+  background: #c2a47f;
+  border-radius: 0 6px 6px 0;
 }
 
 .card-dampak:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  background-color: #f9f6f1;
 }
 
 /* Style untuk Judul Card */
 .card-dampak h3 {
   font-size: 1.8rem;
-  color: #000000;
-  margin-bottom: 10px;
+  color: #3e3a3a;
+  margin-bottom: 15px;
+  font-family: "Times New Roman", serif;
   display: flex;
   align-items: center;
 }
 
 .card-dampak h3:before {
-  content: "🔷";
-  /* Ikon bintang kecil */
-  color: #000000;
-  margin-right: 10px;
-  font-size: 1.2rem;
+  content: "📜";
+  color: #c2a47f;
+  margin-right: 12px;
+  font-size: 1.5rem;
 }
 
 /* Style untuk Isi Card */
 .card-dampak p {
-  font-size: 1.15rem;
-  line-height: 1.75;
-  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #5a5652;
+  font-family: "Georgia", serif;
+}
+
+/* Efek Hover pada Isi Card */
+.card-dampak p:hover {
+  color: #3e3a3a;
+  transition: color 0.3s ease;
+}
+
+/* Style untuk Kontainer Button di Dalam Card */
+.card-button-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card-button {
+  background-color: #c2a47f;
+  color: #ffffff;
+  padding: 8px 15px;
+  font-size: 1rem;
+  font-family: "Times New Roman", serif;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #a8896a;
 }
 
 /* Sumber Referensi Styles */
 .sumber-item {
-  font-size: 1.1rem;
-  color: #475569;
-  background-color: #f3f4f6; /* Sesuaikan dengan warna utama */
+  display: flex;
+  align-items: center;
+  background-color: #fdf3e6;
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s;
+}
+
+.sumber-item,
+.anggota-list li {
+  margin-bottom: 10px; /* Memberikan ruang agar tidak terlalu rapat */
+}
+
+.sumber-item-content {
+  flex-grow: 1;
+}
+
+.sumber-item a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
 }
 
 .sumber-item:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
 .anggota-list {
   list-style-type: none;
   padding: 0;
-  font-size: 1.1rem;
-  color: #334155;
-  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
+  font-size: 1rem;
+  color: #333;
 }
 
 .anggota-list li {
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.9), rgba(0, 86, 179, 0.9));
-  color: #fff;
-  padding: 15px 25px;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  font-weight: 600;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  background: #e6d5c3;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .anggota-list li i {
@@ -507,12 +701,12 @@ footer p:hover {
 
 .anggota-list li:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  background: #d5c1a1;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Layout */
 @media (max-width: 768px) {
-
   /* Global Adjustments */
   .container {
     width: 95%;
@@ -523,13 +717,12 @@ footer p:hover {
     font-size: 2em;
   }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .navbar-desktop {
+    display: none; /* Hide desktop navbar */
   }
 
-  nav ul li {
-    margin: 5px 0;
+  .navbar-mobile {
+    display: block; /* Show mobile navbar */
   }
 
   /* Hero Section */
@@ -582,7 +775,7 @@ footer p:hover {
     font-size: 2rem;
   }
 
-  .pergerakan-list>li h3 {
+  .pergerakan-list > li h3 {
     font-size: 1.5rem;
   }
 
@@ -629,7 +822,6 @@ footer p:hover {
 
 /* Tambahan untuk Peristiwa dan Dampak */
 @media (max-width: 768px) {
-
   /* Header di halaman Peristiwa */
   header h1 {
     font-size: 2em;
@@ -649,6 +841,30 @@ footer p:hover {
   nav ul li {
     margin: 5px 0;
   }
+
+  #hero h2 {
+    font-size: 1.5rem; /* Ukuran lebih kecil untuk mobile */
+  }
+  #hero p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sumber-item,
+  .anggota-list li {
+    margin-bottom: 15px;
+  }
+
+  footer {
+    padding: 30px 10px; /* Memberikan padding lebih agar tidak sempit */
+  }
 }
 
 @keyframes fadeInUp {
@@ -663,7 +879,7 @@ footer p:hover {
   }
 }
 
-.pergerakan-list>li {
+.pergerakan-list > li {
   animation: fadeInUp 0.6s ease both;
 }
 
@@ -672,4 +888,9 @@ footer p:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Show menu when active */
+.mobile-menu.show {
+  display: block;
 }
