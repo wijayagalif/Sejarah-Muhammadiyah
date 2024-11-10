@@ -480,67 +480,80 @@ footer p:hover {
 }
 
 /* Styles for Content Section in Peristiwa Penting Muhammadiyah */
-
 #content {
-  background: #f9f7f1;
-  padding: 60px 20px;
+  padding: 50px 0;
 }
 
-#content .section-title {
-  font-size: 45px;
-  color: #4a403a;
+.section-title {
+  font-size: 2.5rem;
+  color: #3e372c;
   text-align: center;
   font-family: "Garamond", serif;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #d4c4b4;
+  padding-bottom: 10px;
 }
 
+/* Card Style */
 .card {
-  background-color: #ffffff;
+  background-color: #faf8f5;
   border: 1px solid #d4c4b4;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  position: relative;
-  overflow: hidden;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
+/* Section Heading */
 .card h3 {
-  font-size: 1.8rem;
-  font-family: "Garamond", serif;
+  font-size: 1.7rem;
   color: #4a403a;
-  margin-bottom: 10px;
-  position: relative;
+  font-family: "Garamond", serif;
+  margin-bottom: 15px;
+  border-left: 4px solid #c4a484;
+  padding-left: 10px;
 }
 
+/* Text Content */
 .card p {
   font-size: 1.1rem;
+  line-height: 1.8;
   color: #5d5550;
-  line-height: 1.75;
-  font-family: "Georgia", serif;
+  margin-bottom: 20px;
 }
 
+/* List Style */
 .card ul {
-  margin-top: 15px;
-  padding-left: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .card ul li {
   font-size: 1rem;
-  color: #333;
-  margin-bottom: 8px;
+  color: #4a403a;
+  padding: 8px 0;
   position: relative;
-  padding-left: 1.2em;
 }
 
-/* Dampak Muhammadiyah Styles */
+.card ul li::before {
+  content: "\2022";
+  color: #c4a484;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Dampak Styles */
 #dampak {
-  background-color: #faf8f5; /* Latar belakang lebih hangat */
+  background-color: #f9f4ef; /* Latar klasik */
   padding: 50px 20px;
 }
 
@@ -562,48 +575,22 @@ footer p:hover {
   padding: 25px;
   margin-bottom: 25px;
   position: relative;
-  border: 2px solid #c2a47f; /* Warna garis samping cokelat vintage */
-  border-radius: 15px;
+  border: 1px solid #c2a47f;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
 
-.card-dampak:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 8px;
-  background: #c2a47f;
-  border-radius: 0 6px 6px 0;
-}
-
-.card-dampak:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  background-color: #f9f6f1;
-}
-
-/* Style untuk Judul Card */
 .card-dampak h3 {
   font-size: 1.8rem;
   color: #3e3a3a;
-  margin-bottom: 15px;
   font-family: "Times New Roman", serif;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
-.card-dampak h3:before {
-  content: "📜";
-  color: #c2a47f;
-  margin-right: 12px;
-  font-size: 1.5rem;
-}
-
-/* Style untuk Isi Card */
 .card-dampak p {
   font-size: 1.1rem;
   line-height: 1.7;
@@ -611,68 +598,38 @@ footer p:hover {
   font-family: "Georgia", serif;
 }
 
-/* Efek Hover pada Isi Card */
-.card-dampak p:hover {
-  color: #3e3a3a;
-  transition: color 0.3s ease;
+.card-dampak:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Style untuk Kontainer Button di Dalam Card */
-.card-button-container {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.card-button {
-  background-color: #c2a47f;
-  color: #ffffff;
-  padding: 8px 15px;
-  font-size: 1rem;
-  font-family: "Times New Roman", serif;
-  text-transform: uppercase;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.card-button:hover {
-  background-color: #a8896a;
-}
-
-/* Sumber Referensi Styles */
+/* Desain Sumber Item */
 .sumber-item {
   display: flex;
   align-items: center;
-  background-color: #fdf3e6;
+  background-color: #e6d8c3;
   padding: 15px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 8px;
+  border-left: 5px solid #a87d56;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: box-shadow 0.3s ease, transform 0.3s;
 }
 
-.sumber-item,
-.anggota-list li {
-  margin-bottom: 10px; /* Memberikan ruang agar tidak terlalu rapat */
-}
-
-.sumber-item-content {
-  flex-grow: 1;
-}
-
 .sumber-item a {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  color: #007bff;
+  color: #8a563e;
   text-decoration: none;
+  font-style: italic;
 }
 
 .sumber-item:hover {
-  transform: scale(1.02);
+  transform: translateX(5px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
 
+/* Style untuk Anggota Kelompok */
 .anggota-list {
   list-style-type: none;
   padding: 0;
@@ -785,16 +742,12 @@ footer p:hover {
   }
 
   /* Dampak Muhammadiyah Section */
-  #dampak .section-title {
-    font-size: 2rem;
+  #dampak {
+    padding: 30px 10px;
   }
-
-  .card-dampak h3 {
-    font-size: 1.5rem;
-  }
-
-  .card-dampak p {
-    font-size: 1rem;
+  .card-dampak {
+    padding: 15px;
+    font-size: 0.9rem;
   }
 
   /* Sumber Referensi Section */
@@ -848,6 +801,19 @@ footer p:hover {
   }
   #hero p {
     font-size: 0.875rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+  }
+
+  .card p,
+  .card ul li {
+    font-size: 1rem;
   }
 }
 
